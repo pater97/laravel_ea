@@ -1951,6 +1951,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37648,12 +37661,52 @@ var render = function () {
   return _c(
     "div",
     { staticClass: "page" },
-    _vm._l(_vm.games, function (game) {
-      return _c("div", { key: game.name, staticClass: "games" }, [
-        _c("h1", [_vm._v("\n           " + _vm._s(game.title) + "\n       ")]),
-      ])
-    }),
-    0
+    [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-4" },
+            _vm._l(_vm.games, function (game) {
+              return _c(
+                "div",
+                {
+                  key: game.name,
+                  staticClass: "card",
+                  staticStyle: { width: "18rem" },
+                },
+                [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: { src: "/img/" + game.thumb, alt: "..." },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h5", { staticClass: "card-title" }, [
+                      _vm._v(_vm._s(game.title)),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                      [_vm._v("view preview")]
+                    ),
+                  ]),
+                ]
+              )
+            }),
+            0
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.games, function (game) {
+        return _c("div", { key: game.name, staticClass: "games" }, [
+          _c("h1", [_vm._v("\n      " + _vm._s(game.title) + "\n    ")]),
+        ])
+      }),
+    ],
+    2
   )
 }
 var staticRenderFns = []
