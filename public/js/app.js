@@ -1963,7 +1963,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37663,53 +37662,81 @@ var render = function () {
     { staticClass: "page" },
     [
       _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-4" },
-            _vm._l(_vm.games, function (game) {
-              return _c(
-                "div",
-                {
-                  key: game.name,
-                  staticClass: "card",
-                  staticStyle: { width: "18rem" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: { src: "/img/" + game.thumb, alt: "..." },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h5", { staticClass: "card-title" }, [
-                      _vm._v(_vm._s(game.title)),
-                    ]),
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row my-4 " },
+          _vm._l(_vm.games, function (game) {
+            return _c(
+              "div",
+              {
+                key: game.name,
+                staticClass: "col-md-4 justify-content-center d-flex",
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "card my-5", staticStyle: { width: "18rem" } },
+                  [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: { src: "/img/" + game.thumb, alt: "..." },
+                    }),
                     _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
-                      [_vm._v("view preview")]
-                    ),
-                  ]),
-                ]
-              )
-            }),
-            0
-          ),
-        ]),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(game.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" },
+                        },
+                        [_vm._v("view preview")]
+                      ),
+                    ]),
+                  ]
+                ),
+              ]
+            )
+          }),
+          0
+        ),
       ]),
       _vm._v(" "),
       _vm._l(_vm.games, function (game) {
         return _c("div", { key: game.name, staticClass: "games" }, [
-          _c("h1", [_vm._v("\n      " + _vm._s(game.title) + "\n    ")]),
+          _c("iframe", {
+            attrs: {
+              width: "560",
+              height: "315",
+              src: game.video,
+              title: "YouTube video player",
+              frameborder: "0",
+              allow:
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+              allowfullscreen: "",
+            },
+          }),
         ])
       }),
     ],
     2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "text-center text-danger" }, [
+      _c("strong", [_vm._v("OUR GAMES")]),
+    ])
+  },
+]
 render._withStripped = true
 
 

@@ -1,9 +1,10 @@
 <template>
   <div class="page">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card" v-for="game in games" :key="game.name" style="width: 18rem">
+        <h1 class="text-center text-danger"><strong>OUR GAMES</strong></h1>
+      <div class="row my-4 ">
+        <div class="col-md-4 justify-content-center d-flex" v-for="game in games" :key="game.name">
+          <div class="card my-5"  style="width: 18rem">
             <img :src="'/img/' + game.thumb" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{game.title}}</h5>
@@ -14,9 +15,7 @@
       </div>
     </div>
     <div class="games" v-for="game in games" :key="game.name">
-      <h1>
-        {{ game.title }}
-      </h1>
+      <iframe width="560" height="315" :src="game.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </template>
