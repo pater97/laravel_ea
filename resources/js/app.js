@@ -65,7 +65,7 @@ const game = Vue.component('game',require('./pages/game.vue').default);
 ];
 
 const router = new VueRouter({
-    mode: 'hystory',
+    mode: 'history',
     routes
 })
 

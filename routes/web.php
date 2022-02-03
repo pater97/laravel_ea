@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\GameResource;
+use App\Game;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/', 'gameController@index')->name('home');
+
+
 Route::get('/{any}', function () {
-    return view('welcome');
+    return view('layouts.app');
 })->where('any', '.*');
 
 
@@ -23,4 +28,3 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
