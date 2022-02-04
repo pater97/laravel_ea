@@ -24,6 +24,8 @@ Vue.use(VueRouter);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('glitch-component', require('./components/glitchComponent.vue').default);
+
 const home = Vue.component('home',require('./pages/home.vue').default); 
 const about = Vue.component('about',require('./pages/about.vue').default); 
 const contacts = Vue.component('contacts',require('./pages/contacts.vue').default); 

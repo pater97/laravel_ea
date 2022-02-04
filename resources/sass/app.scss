@@ -5,4 +5,110 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color: $background;
+}
+
+#navbar{
+    background-color: $background;
+    .row{
+        height: 4rem;
+    }
+    // bottoni navbar
+    .nav_square{
+        margin:0 2rem;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nav_link{
+            text-decoration: none;
+            color: $lightBrand;
+            font-family: 'Bungee';
+        }
+    }
+    // navbar sinistra
+    .left_bar{
+        .nav_square{
+            border-left: 2px solid $lightBrand;
+            border-radius: 0 0 0 2.5rem ;
+            &:hover{
+                box-shadow: -19px -3px 20px 2px #9d4edd;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+    // logo
+    .central_bar{
+        position: relative;
+    }
+    // navbar destra
+    .right_bar{
+        .nav_square{
+            border-right: 2px solid $lightBrand;
+            border-radius: 0 0 2.5rem 0;
+            &:hover{
+                box-shadow: 19px -3px 20px 2px #9d4edd;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}
+
+
+
+
+// utilities
+// glitch title
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .glithc {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 100px;
+      color: #fff;
+      position: relative;
+      padding: 30px;
+      &:before, &:after {
+        content: 'LOGO';
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        color: #fff;
+        padding: 30px;
+      }
+      &:before {
+        left: 3px;
+        text-shadow: -2px 0 red;
+        animation: glitch-before 2s linear 0s infinite alternate-reverse;
+      }
+      &:after {
+        left: -3px;
+        text-shadow: -2px 0 green;
+        animation: glitch-after 2s linear 0s infinite alternate;
+      }
+    }
+  }
+  
+  @keyframes glitch-before {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+    }
+  }
+  
+  @keyframes glitch-after {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+    }
+  }
